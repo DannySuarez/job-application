@@ -1,18 +1,6 @@
+import getBearInfo from '../src/getBearInfo.js';
 const test = QUnit.test;
 
-function getBearInfo(formData) {
-
-    //Make object literal, literally making an object
-    const applicant = {
-        name: formData.get('full-name'),
-        age: formData.get('age'),
-        accessories: formData.getAll('accessories'),
-        mood: formData.get('mood'),
-        color: formData.get('color'),
-        background: formData.get('background'),
-    };
-    return applicant;
-}
 test('build a function that returns an object', assert => {
     //arrange
 
@@ -36,9 +24,9 @@ test('build a function that returns an object', assert => {
     formData.set('background', expected.background);
 
     //act
-    const applicant = getBearInfo(formData);
+    const details = getBearInfo(formData);
 
     // assert
-    assert.deepEqual(applicant, expected);
+    assert.deepEqual(details, expected);
 
 });
