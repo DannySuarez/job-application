@@ -3,8 +3,6 @@ const test = QUnit.test;
 
 test('build a function that returns an object', assert => {
     //arrange
-
-    //act
     const expected = {
         name: 'yogurt',
         age: '4',
