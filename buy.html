@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Awesome Bear</title>
+    <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Make your bear
+        </h1>
+    </header>
+    <main>
+        <form id="buy-app">
+
+            <h2>A little about this bear.</h2>
+
+            <section>
+                <p>
+                    <label for="name">What would you like to name it:</label>
+                    <input type="text" name="full-name" id="full-name" placeholder="Please type your name" required>
+                </p>
+                <p>
+                     <label for="age">How old is your bear:</label>   
+                     <input type="number" id="age" required>
+                </p>
+            </section>
+
+            <section>
+                <fieldset>
+                    <legend>
+                        What should your bear have?
+                    </legend>
+
+                    <div>
+                        <input type="checkbox" value="cap" name="accessories" id="cap">
+                        <label for="cap">Baseball cap</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" value="shoes" name="accessories" id="shoes">
+                        <label for="shoes">Shoes</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" value="shirt" name="accessories" id="shirt">
+                        <label for="shirt">Shirt</label>
+                    </div>
+                </fieldset>
+            </section>
+
+            <section>
+                <fieldset>
+                    <legend>
+                        Is your bear Happy or Sad?
+                    </legend>
+                    <input type="radio" id="happy" value="happy" name="mood" required>
+                    <label>Happy</label>
+
+                    <input type="radio" id="sad" value="sad" name="mood" required>
+                    <label>Sad</label>  
+                </fieldset>
+            </section>
+
+            <section>
+                <fieldset>
+                    <label for="color">Select Color:</label>
+                    <select name="color" id="color" required>
+
+                        <option value="" hidden disabled selected>Select a color</option>
+                        <option value="red">Red</option>
+                        <option value="green">Green</option>
+                        <option value="blue">Blue</option>
+                        <option value="rainbow">Rainbow</option>
+
+                    </select>
+                </fieldset>
+            </section>
+
+            <section>
+                <fieldset>
+
+                    <label for="background">Tell us a little story about your bear?</label>
+                    <br />
+                    <textarea name="background" id="background"></textarea>
+
+                </fieldset>
+            </section>
+                
+            <h2>Build your bear!</h2>
+            <button>Submit</button>
+        </form>
+    </main>
+    
+    
+    <script type="module" src="./src/buy.js"></script>
+</body>
+</html>
