@@ -3,8 +3,11 @@ const test = QUnit.test;
 
 QUnit.module('bear info api');
 
+bearDetailsApi.storage = sessionStorage;
+const testStorage = sessionStorage;
+
 test('round-trip bear details', assert => {
-    localStorage.removeItem('allOrders');
+    testStorage.removeItem('allOrders');
 
     //arrange
     const bearDetails = { name: 'marshmallow' };
@@ -19,7 +22,7 @@ test('round-trip bear details', assert => {
 
 test('no orders in local storage returns an empty array', assert => {
     //arrange
-    localStorage.removeItem('allOrders');
+    testStorage.removeItem('allOrders');
     const expected = [];
 
     //act
@@ -39,7 +42,7 @@ test('two saves return array with two items', assert => {
     const order1 = { name: 'marshmallow' };
     const order2 = { name: 'ice cream' };
     const expected = [order1, order2];
-    
+
     bearDetailsApi.save(order1);
     bearDetailsApi.save(order2);
 
@@ -47,6 +50,6 @@ test('two saves return array with two items', assert => {
     const allOrders = bearDetailsApi.getAll();
 
     //assert
-    assert.deepEqual(allOrders, expected)
+    assert.deepEqual(allOrders, expected);
 
 });

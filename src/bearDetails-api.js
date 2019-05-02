@@ -1,4 +1,5 @@
 const bearDetailsApi = {
+    storage: localStorage,
     save(bearDetails) {
         //get an array with order details
         const allOrders = bearDetailsApi.getAll();
@@ -6,7 +7,7 @@ const bearDetailsApi = {
         //serialize to json
         const json = JSON.stringify(allOrders);
         //save to local storage
-        localStorage.setItem('allOrders', json);
+        bearDetailsApi.storage.setItem('allOrders', json);
     },
     get() {
 
@@ -17,7 +18,7 @@ const bearDetailsApi = {
     },
     getAll() {
         //get from local storage
-        const json = localStorage.getItem('allOrders');
+        const json = bearDetailsApi.storage.getItem('allOrders');
         //deserialize 
         let allOrders = JSON.parse(json);
         if(!allOrders) {
