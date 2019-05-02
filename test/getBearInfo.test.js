@@ -26,5 +26,4 @@ test('build a function that returns an object', assert => {
 
     // assert
     assert.deepEqual(details, expected);
-
 });

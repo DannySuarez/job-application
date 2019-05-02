@@ -32,8 +32,6 @@ test('no orders in local storage returns an empty array', assert => {
     assert.deepEqual(allOrders, expected);
 
     //assert
-
-
 });
 
 test('two saves return array with two items', assert => {
@@ -52,5 +50,4 @@ test('two saves return array with two items', assert => {
 
     //assert
     assert.deepEqual(allOrders, expected);
-
 });

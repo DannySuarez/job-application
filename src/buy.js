@@ -12,4 +12,6 @@ form.addEventListener('submit', (event) => {
     const formData = new FormData(form);
     const details = getBearInfo(formData);
     bearDetailsApi.save(details);
+
+    window.location = 'thankYou.html';
 });
