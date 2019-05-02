@@ -5,7 +5,7 @@ test('build a function that returns an object', assert => {
     //arrange
     const expected = {
         name: 'yogurt',
-        age: '4',
+        age: 4,
         accessories: ['cap', 'shoes'],
         mood: 'happy',
         color: 'rainbow',
