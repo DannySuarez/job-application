@@ -21,6 +21,7 @@ test('round-trip bear details', assert => {
 });
 
 test('no orders in local storage returns an empty array', assert => {
+    
     //arrange
     testStorage.removeItem('allOrders');
     const expected = [];
