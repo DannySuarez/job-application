@@ -8,7 +8,6 @@ const color = document.getElementById('color');
 const background = document.getElementById('background');
 
 const bear = bearDetailsApi.get();
-console.log(bear);
 if(!bear) {
     window.location = './';
 }

@@ -10,7 +10,6 @@ function getBearInfo(formData) {
         color: formData.get('color'),
         background: formData.get('background'),
     };
-    console.log(details.age, 'bear info');
     return details;
 }
 export default getBearInfo;
