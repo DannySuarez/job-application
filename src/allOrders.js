@@ -10,7 +10,17 @@ for(let i = 0; i < allOrders.length; i++) {
     const tr = document.createElement('tr');
 
     const nameCell = document.createElement('td');
-    nameCell.textContent = order.name;
+
+    const link = document.createElement('a');
+
+    const searchParams = new URLSearchParams();
+
+    searchParams.set('name', order.name);
+
+    link.href = 'orders.html?' + searchParams.toString();
+
+    link.textContent = order.name;
+    nameCell.appendChild(link);
     tr.appendChild(nameCell);
 
     const ageCell = document.createElement('td');
