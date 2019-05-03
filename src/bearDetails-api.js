@@ -9,12 +9,17 @@ const bearDetailsApi = {
         //save to local storage
         bearDetailsApi.storage.setItem('allOrders', json);
     },
-    get() {
+    get(name) {
 
         //use get all 
         const allOrders = bearDetailsApi.getAll();
         //return
-        return allOrders[0];
+        for(let i = 0; i < allOrders.length; i++) {
+            const order = allOrders[i];
+            if(order.name === name) {
+                return order;
+            }
+        }
     },
     getAll() {
         //get from local storage
@@ -24,10 +29,8 @@ const bearDetailsApi = {
         if(!allOrders) {
             allOrders = [];
         }
-
         return allOrders;
     }
-
 };
 
 export default bearDetailsApi;

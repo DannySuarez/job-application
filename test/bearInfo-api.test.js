@@ -11,13 +11,15 @@ test('round-trip bear details', assert => {
 
     //arrange
     const bearDetails = { name: 'marshmallow' };
+    const bearDetails2 = { name: 'marshmallow2' };
 
     //act
     bearDetailsApi.save(bearDetails);
-    const result = bearDetailsApi.get();
+    bearDetailsApi.save(bearDetails2);
+    const result = bearDetailsApi.get(bearDetails2.name);
 
     // assert
-    assert.deepEqual(result, bearDetails);
+    assert.deepEqual(result, bearDetails2);
 });
 
 test('no orders in local storage returns an empty array', assert => {
