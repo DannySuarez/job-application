@@ -7,7 +7,11 @@ const mood = document.getElementById('mood');
 const color = document.getElementById('color');
 const background = document.getElementById('background');
 
-const bear = bearDetailsApi.get();
+//get the applicant name
+const searchParams = new URLSearchParams(window.location.search);
+const name = searchParams.get('name');
+
+const bear = bearDetailsApi.get(name);
 
 if(!bear) {
     window.location = './';
