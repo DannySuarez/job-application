@@ -1,3 +1,6 @@
+body {
+    background-color: rgb(232, 194, 255);
+}
 dl {
     display: grid;
     grid-template-columns: max-content 1fr;
@@ -6,10 +9,10 @@ dl {
 dt, dd {
     display: inline-block;
     padding: 8px 10px;
+    margin: 0px;
 }
 
 dt {
-    background-color: rgb(40, 157, 165);
-    text-align: right;
-    
+    background-color: rgb(232, 194, 255);
+    text-align: right; 
 }
